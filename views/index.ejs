@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/frontend.css' />
+    <link href='https://api.mapbox.com/mapbox.js/v2.2.2/mapbox.css' rel='stylesheet' />
+    <script src="/javascripts/frontend.js"></script>
+  </head>
+  <body>
+    <div class="site-wrapper">  
+
+    <%= include content_btn/location_contacto.ejs %>
+      
+    <%= include carousel.ejs %>
+        
+      <div class="site-wrapper-inner">
+        <div class="cover-container">
+
+          <div class="masthead clearfix">
+            <div class="inner">
+              <h3 class="masthead-brand"><%= title %></h3>
+
+              <%= include nav.ejs %>
+
+            </div>
+          </div>
+
+          <!-- contenido -->
+          <div class="inner cover">
+            <h1 id="h1" class="cover-heading"></h1>
+            <p id="p" class="lead"></p>
+          </div>
+          <!-- /contenido -->
+
+          <div class="mastfoot">
+            <div class="inner">
+              <p>Contribuye al desarrollo en <a target="_blank" href="https://github.com/rody7val/higiemax-site/">GitHub</a>.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </body>
+</html>
