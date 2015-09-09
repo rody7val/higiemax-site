@@ -43,15 +43,15 @@ function showhide(id) {
 		L.mapbox.accessToken = 'pk.eyJ1Ijoicm9kN3ZhbCIsImEiOiJ4NFVxa29rIn0.TsEEJODEdqc_EPaxE35YEw';
 		var mapa = L.mapbox.map('map', 'rod7val.ldnnodk2');
 		var layer = L.mapbox.featureLayer().addTo(mapa);
-		ref--;
-	}
-	console.log(ref);
-	e.style.display = (e.style.display == 'block') ? 'none' : 'block';
-  		mapa.setView([latitud, longitud], zoom);
+		mapa.setView([latitud, longitud], zoom);
 		var marker = L.marker([latMrk, lngMrk], {
 		    icon: L.mapbox.marker.icon({ 'marker-color': '#f86767' })
 		});
 		mapa.invalidateSize();
+		ref--;
+	}
+	console.log(ref);
+	e.style.display = (e.style.display == 'block') ? 'none' : 'block';
 }
 $(document).ready(function () {
 	//activar slider
