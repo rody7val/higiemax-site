@@ -14,15 +14,78 @@ router.get('/empresa', function (req, res) {
         p: 'Somos una empresa dedicada al servicio de limpieza, pioneros en la zona.'
     })
 });
-// GET /servicio (ajax)
+
+// GET /servicios (ajax)
 router.get('/servicios', function (req, res) {
     res.json_v2({
         name: 'Servicios',
         h1: 'Servicios',
-        p: 'Limpieza institucional, finales de obra y eventos.'
+        p: [],
+        dt: [
+        // -- FINAL DE EVENTOS --
+        '<dt '+
+          'data-target="#carousel_final-de-eventos">'+ //data-terget to carousel
+          '<a '+
+            'id="final-de-eventos"'+
+            'onclick="change_carousel(this.id)"'+
+          '>Final de eventos</a></dt>'+
+        '<dd '+ //info collapse
+          'class="collapse"'+
+          'id="collapse_final-de-eventos"'+
+        '>Descripcion de final de eventos [/...]</dd>'
+        ,
+        // -- FINAL DE OBRAS --
+        '<dt '+
+          'data-target="#carousel_final-de-obras">'+ //data-terget to carousel
+          '<a '+
+            'id="final-de-obras"'+
+            'onclick="change_carousel(this.id)"'+
+          '>Final de obras</a></dt>'+
+        '<dd '+ //info collapse
+          'class="collapse"'+
+          'id="collapse_final-de-obras"'+
+        '>Descripcion de final de obras [/...]</dd>'
+        ,
+        // -- VIDRIOS --
+        '<dt '+
+          'data-target="#carousel_vidrios">'+ //data-terget to carousel
+          '<a '+
+            'id="vidrios"'+
+            'onclick="change_carousel(this.id)"'+
+          '>Vidrios</a></dt>'+
+        '<dd '+  //info collapse
+          'class="collapse"'+
+          'id="collapse_final-de-obras"'+
+        '>Descripcion de vidrios [/...]</dd>'
+        ,
+        // -- OFICINAS --
+        '<dt '+
+          'data-target="#carousel_oficinas">'+ //data-target to carousel
+          '<a '+
+            'id="oficinas" '+
+            'onclick="change_carousel(this.id)"'+
+          '>Oficinas</a></dt>'+
+        '<dd '+  //info collapse
+          'class="collapse"'+
+          'id="collapse_oficinas"'+
+        '>Descripcion de oficinas [/...]</dd>'
+        ,
+        // -- ESPECIALES --
+        '<dt '+
+          'data-target="#carousel_especiales">'+ //data-target to carousel
+          '<a '+
+            'id="especiales" '+
+            'onclick="change_carousel(this.id)"'+
+          '>Especiales</a></dt>'+
+        '<dd '+  //info collapse
+          'class="collapse"'+
+          'id="collapse_especiales"'+
+        '>Descripcion de especiales [/...]</dd>'
+        ]
     })
 });
-// GET /contacto (ajax)
+
+// GET /clientes (ajax)
 router.get('/clientes', function (req, res) {
     res.json_v2({
         name: 'Clientes',
