@@ -6,6 +6,10 @@
     "type": "git",
     "url": "https://github.com/rody7val/higiemax-site.git"
   },
+  "engines":{
+    "node": "0.10.x",
+    "npm": "2.13.x"
+  },
   "author": "Rodolfo Valguarnera",
   "license": "GPL-3",
   "bugs": {
