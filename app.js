@@ -6,8 +6,6 @@ var cookieParser  = require('cookie-parser');
 var bodyParser    = require('body-parser');
 var partials      = require('express-partials');
 
-var routes = require('./routes/index');
-var users = require('./routes/users');
 
 var app = express();
 
@@ -36,8 +34,9 @@ function jsonMiddleware(req, res, next) {
 
 app.use(jsonMiddleware); // Note: this should above app.use(app.router)
 
-app.use('/', routes);
-app.use('/users', users);
+// Rutas API
+var api = require('./routes/api');
+app.use('/', api);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
